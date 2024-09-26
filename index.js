@@ -99,27 +99,57 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+enkucuk = sayilar[0];
+enbuyuk = sayilar[0];
+for (let i = 0; i< sayilar.length; i++) {
+ if (sayilar[i] < enkucuk) {
+  enkucuk = sayilar[i]
+ } ;
+ if (sayilar[i] > enbuyuk) {
+  enbuyuk = sayilar[i]
+ };
+}
 
 // 3b çözümü:
 
-/* kodlar buraya */
+ucetambolunenler = [];
+sayilar.forEach( (sayi) => {
+  if ((sayi % 3) === 0) {
+    ucetambolunenler.push(sayi)
+  }
+})
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce( (total, num) => {
+  return total += num
+})
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter ( (sayi) => {
+  return sayi < 500
+} );
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = besyuzdenkucuksayilar.sort((a,b) => a-b)
 
 // 3f çözümü
 
-/* kodlar buraya */
+tekraredensayilar = [];
+let depo = {};
+  for (let i of sayilar) {
+    depo[i] = 0;
+  }
+  for (let j of sayilar) {
+    depo[j]++;
+  }
+for (let key in depo) {
+  if(depo[key] > 1) {
+    tekraredensayilar.push(`${key} sayısı ${depo[key]} kere tekrar edilmiştir`)
+  }
+}
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
